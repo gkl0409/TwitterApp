@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TwitterAPP/TimeLineViewController.m"
-            timestampString = "457810470.970931"
+            timestampString = "457815997.32595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "-onNew:"
             landmarkType = "5">
          </BreakpointContent>

@@ -27,6 +27,12 @@
     self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Refresh"];
     [self.refreshControl addTarget:self action:@selector(callTimeLineApi) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
+    
+    self.user = [User currentUser];
+    if (self.user != nil) {
+        [self.navigationItem.leftBarButtonItem setTitle:@"Log Out"];
+        [self callTimeLineApi];
+    }
 }
 
 - (void)callTimeLineApi {
@@ -53,6 +59,8 @@
     } else {
         self.user = nil;
         self.tweets = nil;
+        [User setCurrentUser:nil];
+        [[TwitterClient sharedInstance].requestSerializer removeAccessToken];
         [self.navigationItem.leftBarButtonItem setTitle:@"Log In"];
         [self.tableView reloadData];
     }

@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *tagline;
 
 - (id)initWithDictionary: (NSDictionary *)dictionary;
-
++ (User *)currentUser;
++ (void)setCurrentUser:(User *)currentUser;
 
 @end
